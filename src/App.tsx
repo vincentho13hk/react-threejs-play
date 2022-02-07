@@ -1,23 +1,21 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber'
 import Box from './Box'
-import Shape, { Rectangle } from './Shape';
+import Shape, { Rectangle, RectangleFractal } from './Shape';
+import * as THREE from 'three';
+import FractalScene from './Scenes/Fractals';
+import Ch1 from './Scenes/Ch1';
 
 
 
 function App() {
-  const points = [[0, 0, 0], [2, 2, 0], [-2, 2, 0]]
   return (
-    <div>
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        {/* <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} /> */}
-        <Shape points={points} />
-        {/* <Rectangle x={0} y={0} z={0} size={2} /> */}
-      </Canvas>
-    </div>
+    <>
+      <div style={{ height: '90%' }}>
+        <Ch1 />
+      </div>
+      <button />
+    </>
   );
 }
 
